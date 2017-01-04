@@ -1,4 +1,3 @@
-//#include <Adafruit_SleepyDog.h>
 #include <SoftwareSerial.h>
 #include "sim800.h"
 
@@ -13,7 +12,7 @@ boolean modemSetup(const __FlashStringHelper *apn) {
   Serial.println(F("Initializing modem....(May take 3 seconds)"));
   
   ss.begin(9600); // if you're using software serial
-  if (! modem.begin(ss)) {           // can also try fona.begin(Serial1) 
+  if (! modem.begin(ss)) {          
     Serial.println(F("Couldn't find modem"));
     return false;
   }
